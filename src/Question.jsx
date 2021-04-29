@@ -1,23 +1,6 @@
-import Confetti from 'react-dom-confetti';
-
-const config = {
-    angle: "104",
-    spread: "83",
-    startVelocity: 40,
-    elementCount: "97",
-    dragFriction: "0.23",
-    duration: "2230",
-    stagger: "2",
-    width: "16px",
-    height: "16px",
-    perspective: "356px",
-    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
-  };
-
 export default function Question(props){
 
     let checkAnswer=(e)=>{
-        // if(!isclicked){
             let isCorrect =false;
             if(props.correct===parseInt(e.target.id)) isCorrect=true;
             console.log(props.correct);
@@ -30,7 +13,6 @@ export default function Question(props){
                 e.target.classList.add("wrong");
             }
             props.validation([isCorrect,e.target.id]);
-        // }
     }
     return(
         <div className="question-container">

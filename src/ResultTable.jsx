@@ -8,7 +8,7 @@ export default function ResultTable(props){
             <div className="box2">
                 {props.option[props.correct]}
             </div>
-            <div className={props.correct!=props.userAnswer?"wrong box3":"success box3"}>
+            <div className={props.correct!==props.userAnswer?"wrong box3":"success box3"}>
                 {props.option[props.userAnswer]}
             </div>
         </div>
