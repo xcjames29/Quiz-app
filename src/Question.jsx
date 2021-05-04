@@ -1,5 +1,7 @@
+import { useState } from "react/cjs/react.development";
+import Confetti from 'react-confetti';
 export default function Question(props){
-
+    let [confetti,setConfetti] = useState(false);
     let checkAnswer=(e)=>{
             let isCorrect =false;
             if(props.correct===parseInt(e.target.id)) isCorrect=true;
@@ -7,6 +9,7 @@ export default function Question(props){
             document.querySelectorAll(".answer-box").forEach(e=>{
             })
             if(isCorrect){
+                setConfetti(true);
                 e.target.classList.add("success");
             }
             else{
@@ -19,6 +22,9 @@ export default function Question(props){
             <h2>Score {props.score?props.score:0}</h2>
             <h1>{props.quiz?props.quiz:"qweqweqweqweqweqweqw"}</h1>
             <div className="answer-container">
+               {confetti && 
+               <Confetti />
+                }
                 <div className="answer-box"  onClick={checkAnswer} id="0">{props.option1}</div>
                 <div className="answer-box"  onClick={checkAnswer} id="1">{props.option2}</div>
                 <div className="answer-box"  onClick={checkAnswer} id="2">{props.option3}</div>

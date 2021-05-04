@@ -8,8 +8,8 @@ export default function ResultTable(props){
             <div className="box2">
                 {props.option[props.correct]}
             </div>
-            <div className={props.correct!==props.userAnswer?"wrong box3":"success box3"}>
-                {props.option[props.userAnswer]}
+            <div className={props.correct===parseInt(props.userAnswer)?"success box3":"wrong box3"}>
+                {props.option[props.userAnswer]?props.option[props.userAnswer]:""}
             </div>
         </div>
     )

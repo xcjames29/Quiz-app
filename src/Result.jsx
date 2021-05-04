@@ -21,7 +21,7 @@ export default function Result() {
                     </div>
                 </div>
                 {data.question.map((elem, index) => {
-                    return <ResultTable question={elem.question} option={elem.option} correct={elem.correct} userAnswer={data.answers[index]} />
+                    return <ResultTable question={elem.question} option={elem.option} correct={elem.correct} userAnswer={data.answers[index]?data.answers[index]:""} />
                 })}
             </div>
 
