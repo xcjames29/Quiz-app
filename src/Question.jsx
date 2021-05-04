@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import Confetti from 'react-confetti';
 export default function Question(props){
     let [confetti,setConfetti] = useState(false);
