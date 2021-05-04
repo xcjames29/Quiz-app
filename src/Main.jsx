@@ -73,6 +73,7 @@ export default function Main(props) {
         }, 30);
         return ()=> clearInterval(interval);
     }
+    // eslint-disable-next-line
     ,[quizNum])
 
     return (
