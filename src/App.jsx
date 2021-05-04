@@ -13,11 +13,12 @@ export default function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/">
-                    <Main />
-                </Route>
+                
                 <Route exact path="/result">
                     <Result />
+                </Route>
+                <Route path="/">
+                    <Main />
                 </Route>
                 <Route path="/404">
                     <h1>Error</h1>
